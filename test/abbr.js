@@ -7,7 +7,7 @@ const tokenizer = require('../lib/tokenizer');
 
 describe('Abbreviations in sentences', function () {
     describe('Skip dotted abbreviations', function () {
-        const entry = "Lorem ipsum, dolor sed amat frequentor minimus In I.C.T we have multiple challenges! There should only be two sentences.";
+        const entry = "Lorem ipsum, dolor sed amat frequentor minimus In I.C.T we have multiple U.S. challenges! There should only be two sentences.";
         const sentences = tokenizer.sentences(entry);
 
         it("should get 2 sentences", function () {
@@ -16,7 +16,7 @@ describe('Abbreviations in sentences', function () {
     });
 
     describe('Skip dotted abbreviations (B)', function () {
-        const entry = "From amat frequentor minimus hello there at 8 a.m. there p.m. should only be two sentences.";
+        const entry = "From amat frequentor minimus hello there at 8 a.m. there p.m. U.S. should only be two sentences.";
         const sentences = tokenizer.sentences(entry);
 
         it("should get 1 sentence", function () {
